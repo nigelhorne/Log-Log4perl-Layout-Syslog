@@ -27,9 +27,6 @@ our $VERSION = '0.01';
 
 =head1 SYNOPSIS
 
-    use Log::Log4perl::Layout::RFC3164;
-    my $layout = Log::Log4perl::Layout::RFC3164->new();
-
 This format is useful with the Log::Dispatch::Syslog class.
 Add this to your configuration file:
 
@@ -37,6 +34,13 @@ Add this to your configuration file:
     log4perl.appender.A1.Filter=RangeAll
     log4perl.appender.A3.ident=bandsman
     log4perl.appender.A3.layout=Log::Log4perl::Layout::RFC3164
+
+=cut
+
+=head2 new
+
+    use Log::Log4perl::Layout::RFC3164;
+    my $layout = Log::Log4perl::Layout::RFC3164->new();
 
 =cut
 
@@ -51,11 +55,16 @@ sub new {
 	}, $class;
 }
 
+=head2 render
+
+Render a message in the correct format.
+
+=cut
+
 sub render {
 	my($self, $message, $category, $priority, $caller_level) = @_;
 
 	my @months = qw( Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec );
-	my @days = qw(Sun Mon Tue Wed Thu Fri Sat Sun);
 
 	my ($sec,$min,$hour,$mday,$mon,$year,$wday,$yday,$isdst) = localtime();
 	if($sec < 10) {
