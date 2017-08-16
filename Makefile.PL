@@ -19,6 +19,7 @@ WriteMakefile(
     },
     PREREQ_PM => {
 	'Log::Log4perl::Layout' => 0,
+	'Net::Address::IP::Local' => 0,
     },
     dist		=> { COMPRESS => 'gzip -9f', SUFFIX => 'gz', },
     clean		=> { FILES => 'Log-Log4perl-Layout-RFC3164-*' },
