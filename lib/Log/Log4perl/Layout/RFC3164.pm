@@ -32,8 +32,8 @@ Add this to your configuration file:
 
     log4perl.appender.A1=Log::Dispatch::Syslog
     log4perl.appender.A1.Filter=RangeAll
-    log4perl.appender.A3.ident=bandsman
-    log4perl.appender.A3.layout=Log::Log4perl::Layout::RFC3164
+    log4perl.appender.A1.ident=bandsman
+    log4perl.appender.A1.layout=Log::Log4perl::Layout::RFC3164
 
 =cut
 
