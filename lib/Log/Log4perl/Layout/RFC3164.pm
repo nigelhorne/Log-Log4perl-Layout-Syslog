@@ -77,7 +77,9 @@ sub render {
 		$hour = "0$hour";
 	}
 
-	return "<$category$priority>$months[$mon] $mday $min:$hour:$sec " . Net::Address::IP::Local->public_ipv4() . ' ' . $0 . "[$$]: $message";
+	my $p = $category + $priority;
+
+	return "<$p>$months[$mon] $mday $min:$hour:$sec " . Net::Address::IP::Local->public_ipv4() . ' ' . $0 . "[$$]: $message";
 }
 
 =head1 AUTHOR
