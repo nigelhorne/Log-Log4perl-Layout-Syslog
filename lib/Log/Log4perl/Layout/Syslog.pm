@@ -12,11 +12,11 @@ Log::Log4perl::Layout::Syslog - Layout in Syslog format
 
 =head1 VERSION
 
-Version 0.01
+Version 0.02
 
 =cut
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 =head1 SYNOPSIS
 
@@ -60,7 +60,8 @@ Render a message in the correct format.
 =cut
 
 sub render {
-	my($self, $message, $category, $priority, $caller_level) = @_;
+	# my($self, $message, $category, $priority, $caller_level) = @_;
+	my $message = $_[1];
 
 	return "user: $message";
 }
