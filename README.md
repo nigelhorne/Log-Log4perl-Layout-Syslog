@@ -1,6 +1,6 @@
 # Log::Log4perl::Layout::RFC3164
 
-Layout in RFC3164 format
+Layout in Syslog format
 
 # VERSION
 
@@ -14,17 +14,18 @@ Add this to your configuration file:
     log4perl.appender.A1=Log::Dispatch::Syslog
     log4perl.appender.A1.Filter=RangeAll
     log4perl.appender.A1.ident=bandsman
-    log4perl.appender.A1.layout=Log::Log4perl::Layout::RFC3164
+    log4perl.appender.A1.layout=Log::Log4perl::Layout::Syslog
 
 Much of the actual formatting is done by the Sys::Syslog code called
 from Log::Dispatch::Syslog,
 however you can't use Log::Log4perl::Layout::NoopLayout
-since that doesn't insert the ident data that's needed.
+since that doesn't insert the ident data that's needed by systems such as
+flutentd.
 
 ## new
 
-    use Log::Log4perl::Layout::RFC3164;
-    my $layout = Log::Log4perl::Layout::RFC3164->new();
+    use Log::Log4perl::Layout::Syslog;
+    my $layout = Log::Log4perl::Layout::Syslog->new();
 
 ## render
 
@@ -50,25 +51,25 @@ LOG\_USER.
 
 You can find documentation for this module with the perldoc command.
 
-    perldoc Log-Log4perl-Layout-RFC3164
+    perldoc Log-Log4perl-Layout-Syslog
 
 You can also look for information at:
 
 - RT: CPAN's request tracker
 
-    [http://rt.cpan.org/NoAuth/Bugs.html?Dist=Log-Log4perl-Layout-RFC3164](http://rt.cpan.org/NoAuth/Bugs.html?Dist=Log-Log4perl-Layout-RFC3164)
+    [http://rt.cpan.org/NoAuth/Bugs.html?Dist=Log-Log4perl-Layout-Syslog](http://rt.cpan.org/NoAuth/Bugs.html?Dist=Log-Log4perl-Layout-Syslog)
 
 - AnnoCPAN: Annotated CPAN documentation
 
-    [http://annocpan.org/dist/Log-Log4perl-Layout-RFC3164](http://annocpan.org/dist/Log-Log4perl-Layout-RFC3164)
+    [http://annocpan.org/dist/Log-Log4perl-Layout-Syslog](http://annocpan.org/dist/Log-Log4perl-Layout-Syslog)
 
 - CPAN Ratings
 
-    [http://cpanratings.perl.org/d/Log-Log4perl-Layout-RFC3164](http://cpanratings.perl.org/d/Log-Log4perl-Layout-RFC3164)
+    [http://cpanratings.perl.org/d/Log-Log4perl-Layout-Syslog](http://cpanratings.perl.org/d/Log-Log4perl-Layout-Syslog)
 
 - Search CPAN
 
-    [http://search.cpan.org/dist/Log-Log4perl-Layout-RFC3164/](http://search.cpan.org/dist/Log-Log4perl-Layout-RFC3164/)
+    [http://search.cpan.org/dist/Log-Log4perl-Layout-Syslog/](http://search.cpan.org/dist/Log-Log4perl-Layout-Syslog/)
 
 # LICENSE AND COPYRIGHT
 
