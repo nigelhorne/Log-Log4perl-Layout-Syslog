@@ -16,7 +16,7 @@ if($@) {
 } else {
 	my $tps = Test::Pod::Snippets->new;
 
-	my @modules = qw/ Log::Log4perl::Layout::RFC3164 /;
+	my @modules = qw/ Log::Log4perl::Layout::Syslog /;
 
 	$tps->runtest( module => $_, testgroup => 1 ) for @modules;
 }

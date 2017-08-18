@@ -4,10 +4,10 @@ use ExtUtils::MakeMaker 6.64;	# 6.64 for TEST_REQUIRES
 use File::Spec;
 
 WriteMakefile(
-    NAME		=> 'Log::Log4perl::Layout::RFC3164',
+    NAME		=> 'Log::Log4perl::Layout::Syslog',
     AUTHOR		=> q{Nigel Horne <njh@bandsman.co.uk>},
-    VERSION_FROM	=> 'lib/Log/Log4perl/Layout/RFC3164.pm',
-    ABSTRACT_FROM       => 'lib/Log/Log4perl/Layout/RFC3164.pm',
+    VERSION_FROM	=> 'lib/Log/Log4perl/Layout/Syslog.pm',
+    ABSTRACT_FROM       => 'lib/Log/Log4perl/Layout/Syslog.pm',
     ((defined($ExtUtils::MakeMaker::VERSION) &&
      ($ExtUtils::MakeMaker::VERSION >= 6.3002))
       ? ('LICENSE'=> 'GPL')
@@ -22,18 +22,18 @@ WriteMakefile(
 	# 'Net::Address::IP::Local' => 0,
     # },
     dist		=> { COMPRESS => 'gzip -9f', SUFFIX => 'gz', },
-    clean		=> { FILES => 'Log-Log4perl-Layout-RFC3164-*' },
+    clean		=> { FILES => 'Log-Log4perl-Layout-Syslog-*' },
     META_MERGE		=> {
     	'meta-spec' => { version => 2 },
     	resources => {
     		repository => {
 			type => 'git',
-			url => 'git://github.com/nigelhorne/Log-Log4perl-Layout-RFC3164.git',
-			web => 'https://github.com/nigelhorne/Log-Log4perl-Layout-RFC3164',
+			url => 'git://github.com/nigelhorne/Log-Log4perl-Layout-Syslog.git',
+			web => 'https://github.com/nigelhorne/Log-Log4perl-Layout-Syslog',
     		},
 		bugtracker => {
-			web => 'https://rt.cpan.org/Public/Dist/Display.html?Name=Log-Log4perl-Layout-RFC3164',
-			mailto => 'bug-Log-Log4perl-Layout-RFC3164@rt.cpan.org'
+			web => 'https://rt.cpan.org/Public/Dist/Display.html?Name=Log-Log4perl-Layout-Syslog',
+			mailto => 'bug-Log-Log4perl-Layout-Syslog@rt.cpan.org'
 		}
 	},
     },

@@ -13,6 +13,6 @@ eval "use Test::GreaterVersion";
 
 plan skip_all => "Test::GreaterVersion required for checking versions" if $@;
 
-Test::GreaterVersion::has_greater_version_than_cpan('Log::Log4perl::Layout::RFC3164');
+Test::GreaterVersion::has_greater_version_than_cpan('Log::Log4perl::Layout::Syslog');
 
 done_testing();

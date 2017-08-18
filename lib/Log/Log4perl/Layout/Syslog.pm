@@ -1,33 +1,14 @@
-package Log::Log4perl::Layout::RFC3164;
+package Log::Log4perl::Layout::Syslog;
 
-# See 'https://docs.fluentd.org/v0.12/articles/in_syslog'
 use 5.006;
 use strict;
 use warnings;
-# use Log::Log4perl::Level;
-# use Net::Address::IP::Local;
-
-no strict qw(refs);
-use base qw(Log::Log4perl::Layout);
-
-our %severities = (
-	'EMERG' => 0,
-	'ALERT' => 1,
-	'FATAL' => 2,
-	'CRIT' => 2,
-	'ERR' => 3,
-	'WARN' => 4,
-	'NOTICE' => 5,
-	'INFO' => 6,
-	'DEBUG' => 7,
-	'TRACE' => 7,
-);
 
 =encoding utf8
 
 =head1 NAME
 
-Log::Log4perl::Layout::RFC3164 - Layout in RFC3164 format
+Log::Log4perl::Layout::Syslog - Layout in Syslog format
 
 =head1 VERSION
 
@@ -45,18 +26,20 @@ Add this to your configuration file:
     log4perl.appender.A1=Log::Dispatch::Syslog
     log4perl.appender.A1.Filter=RangeAll
     log4perl.appender.A1.ident=bandsman
-    log4perl.appender.A1.layout=Log::Log4perl::Layout::RFC3164
+    log4perl.appender.A1.layout=Log::Log4perl::Layout::Syslog
 
 Much of the actual formatting is done by the Sys::Syslog code called
 from Log::Dispatch::Syslog,
 however you can't use Log::Log4perl::Layout::NoopLayout
-since that doesn't insert the ident data that's needed.
+since that doesn't insert the ident data that's needed by systems such as
+flutentd.
+
 =cut
 
 =head2 new
 
-    use Log::Log4perl::Layout::RFC3164;
-    my $layout = Log::Log4perl::Layout::RFC3164->new();
+    use Log::Log4perl::Layout::Syslog;
+    my $layout = Log::Log4perl::Layout::Syslog->new();
 
 =cut
 
@@ -125,7 +108,7 @@ L<Log::Dispatch::Syslog>
 
 You can find documentation for this module with the perldoc command.
 
-    perldoc Log-Log4perl-Layout-RFC3164
+    perldoc Log-Log4perl-Layout-Syslog
 
 You can also look for information at:
 
@@ -133,19 +116,19 @@ You can also look for information at:
 
 =item * RT: CPAN's request tracker
 
-L<http://rt.cpan.org/NoAuth/Bugs.html?Dist=Log-Log4perl-Layout-RFC3164>
+L<http://rt.cpan.org/NoAuth/Bugs.html?Dist=Log-Log4perl-Layout-Syslog>
 
 =item * AnnoCPAN: Annotated CPAN documentation
 
-L<http://annocpan.org/dist/Log-Log4perl-Layout-RFC3164>
+L<http://annocpan.org/dist/Log-Log4perl-Layout-Syslog>
 
 =item * CPAN Ratings
 
-L<http://cpanratings.perl.org/d/Log-Log4perl-Layout-RFC3164>
+L<http://cpanratings.perl.org/d/Log-Log4perl-Layout-Syslog>
 
 =item * Search CPAN
 
-L<http://search.cpan.org/dist/Log-Log4perl-Layout-RFC3164/>
+L<http://search.cpan.org/dist/Log-Log4perl-Layout-Syslog/>
 
 =back
 
