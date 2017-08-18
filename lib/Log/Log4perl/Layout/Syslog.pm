@@ -48,7 +48,6 @@ sub new {
 	$class = ref ($class) || $class;
 
 	return bless {
-		# format      => undef,
 		info_needed => {},
 		stack       => [],
 	}, $class;
@@ -63,28 +62,6 @@ Render a message in the correct format.
 sub render {
 	my($self, $message, $category, $priority, $caller_level) = @_;
 
-	# my @months = qw( Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec );
-
-	# my ($sec,$min,$hour,$mday,$mon,$year,$wday,$yday,$isdst) = localtime();
-	# if($sec < 10) {
-		# $sec = "0$sec";
-	# }
-	# if($min < 10) {
-		# $min = "0$min";
-	# }
-	# if($hour < 10) {
-		# $hour = "0$hour";
-	# }
-# 
-	# my $p = $severities{$priority};
-	# if(!defined($p)) {
-		# warn "Unknown severity $priority";
-		# return;
-	# }
-
-	# return "<$p>$months[$mon] $mday $min:$hour:$sec " . Net::Address::IP::Local->public_ipv4() . " $p\[$$]: $message";
-	# return "$months[$mon] $mday $min:$hour:$sec " . Net::Address::IP::Local->public_ipv4() . " $p\[$$]: $message";
-	# return $message;
 	return "user: $message";
 }
 
@@ -96,7 +73,7 @@ Nigel Horne, C<< <njh at bandsman.co.uk> >>
 
 I can't work out how to get the ident given to
 Log::Dispatch::Syslog's constructor,
-so ident (facility in RFC3164 lingo) is always sent to 
+so ident (facility in RFC3164 lingo) is always sent to
 LOG_USER.
 
 =head1 SEE ALSO
