@@ -4,7 +4,7 @@ Log::Log4perl::Layout::Syslog - Layout in Syslog format
 
 # VERSION
 
-Version 0.02
+Version 0.03
 
 # SYNOPSIS
 
