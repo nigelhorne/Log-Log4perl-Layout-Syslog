@@ -1,3 +1,5 @@
+.codeclimate.yml
+.tachikoma.yml
 Changes
 lib/Log/Log4perl/Layout/Syslog.pm
 LICENSE
@@ -15,6 +17,7 @@ t/gv.t
 t/kwalitee.t
 t/manifest.t
 t/metrics.t
+t/modules-used.t
 t/namespaces.t
 t/noplan.t
 t/pod-cm.t
@@ -25,5 +28,4 @@ t/snippets.t
 t/spelling.t
 t/syslog.t
 t/unused.t
-t/used.t
 t/vars.t
