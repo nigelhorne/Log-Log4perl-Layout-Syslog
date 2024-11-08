@@ -1,14 +1,13 @@
-.codeclimate.yml
-.tachikoma.yml
 Changes
 lib/Log/Log4perl/Layout/Syslog.pm
 LICENSE
 Makefile.PL
 MANIFEST			This list of files
+MANIFEST.SKIP
 README.md
 t/changes.t
 t/comment-spelling.t
-t/coverage.t
+t/cover.t
 t/critic.t
 t/cv.t
 t/dist.t
@@ -22,11 +21,12 @@ t/modules-used.t
 t/namespaces.t
 t/noplan.t
 t/pod-cm.t
+t/pod-coverage.t
+t/pod-snippets.t
+t/pod-spelling.t
 t/pod.t
 t/port.t
 t/prereq.t
-t/snippets.t
-t/spelling.t
 t/syslog.t
 t/unused.t
 t/vars.t
