@@ -115,10 +115,6 @@ L<http://rt.cpan.org/NoAuth/Bugs.html?Dist=Log-Log4perl-Layout-Syslog>
 
 L<http://annocpan.org/dist/Log-Log4perl-Layout-Syslog>
 
-=item * CPAN Ratings
-
-L<http://cpanratings.perl.org/d/Log-Log4perl-Layout-Syslog>
-
 =item * Search CPAN
 
 L<http://search.cpan.org/dist/Log-Log4perl-Layout-Syslog/>
@@ -127,7 +123,7 @@ L<http://search.cpan.org/dist/Log-Log4perl-Layout-Syslog/>
 
 =head1 LICENSE AND COPYRIGHT
 
-Copyright 2017 Nigel Horne.
+Copyright 2017-2014 Nigel Horne.
 
 This program is released under the following licence: GPL2
 
