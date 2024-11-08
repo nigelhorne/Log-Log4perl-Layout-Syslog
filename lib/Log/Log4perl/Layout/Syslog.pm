@@ -4,6 +4,8 @@ use 5.006;
 use strict;
 use warnings;
 
+use Scalar::Util;
+
 =encoding utf8
 
 =head1 NAME
@@ -45,8 +47,21 @@ flutentd.
 
 sub new {
 	my $class = shift;
-	$class = ref ($class) || $class;
 
+	if(!defined($class)) {
+		# Using Log::Log4perl::Layout::Syslog->new(), not Log::Log4perl::Layout::Syslog::new()
+		# carp(__PACKAGE__, ' use ->new() not ::new() to instantiate');
+		# return;
+
+		# FIXME: this only works when no arguments are given
+		$class = __PACKAGE__;
+	} elsif(Scalar::Util::blessed($class)) {
+		# If $class is an object, clone it with new arguments
+		# return bless { %{$class}, %args }, ref($class);
+		return bless { %{$class} }, ref($class);
+	}
+
+	# Return the blessed object
 	return bless {
 		info_needed => {},
 		stack       => [],
