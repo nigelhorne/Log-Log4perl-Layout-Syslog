@@ -49,10 +49,11 @@ sub new {
 	my $class = shift;
 
 	if(!defined($class)) {
-		# Using Log::Log4perl::Layout::Syslog->new(), not Log::Log4perl::Layout::Syslog::new()
-		# carp(__PACKAGE__, ' use ->new() not ::new() to instantiate');
-		# return;
-
+		# if((scalar keys %args) > 0) {
+			# Using Log::Log4perl::Layout::Syslog->new(), not Log::Log4perl::Layout::Syslog::new()
+			# carp(__PACKAGE__, ' use ->new() not ::new() to instantiate');
+			# return;
+		# }
 		# FIXME: this only works when no arguments are given
 		$class = __PACKAGE__;
 	} elsif(Scalar::Util::blessed($class)) {
@@ -64,7 +65,7 @@ sub new {
 	# Return the blessed object
 	return bless {
 		info_needed => {},
-		stack       => [],
+		stack => [],
 	}, $class;
 }
 
