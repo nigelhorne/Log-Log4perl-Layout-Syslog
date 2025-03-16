@@ -124,7 +124,7 @@ L<http://search.cpan.org/dist/Log-Log4perl-Layout-Syslog/>
 
 =head1 LICENSE AND COPYRIGHT
 
-Copyright 2017-2014 Nigel Horne.
+Copyright 2017-2024 Nigel Horne.
 
 This program is released under the following licence: GPL2
 
