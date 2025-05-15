@@ -27,7 +27,7 @@ Add this to your configuration file:
 
     log4perl.appender.A1=Log::Dispatch::Syslog
     log4perl.appender.A1.Filter=RangeAll
-    log4perl.appender.A1.ident=bandsman
+    log4perl.appender.A1.ident=nigelhorne
     log4perl.appender.A1.layout=Log::Log4perl::Layout::Syslog
 
 Much of the actual formatting is done by the Sys::Syslog code called
@@ -84,7 +84,7 @@ sub render {
 
 =head1 AUTHOR
 
-Nigel Horne, C<< <njh at bandsman.co.uk> >>
+Nigel Horne, C<< <njh at nigelhorne.com> >>
 
 =head1 BUGS
 

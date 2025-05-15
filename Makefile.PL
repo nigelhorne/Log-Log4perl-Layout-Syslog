@@ -14,7 +14,7 @@ if($^O eq 'darwin') {
 
 WriteMakefile(
     NAME		=> 'Log::Log4perl::Layout::Syslog',
-    AUTHOR		=> q{Nigel Horne <njh@bandsman.co.uk>},
+    AUTHOR		=> q{Nigel Horne <njh@nigelhorne.com>},
     VERSION_FROM	=> 'lib/Log/Log4perl/Layout/Syslog.pm',
     ABSTRACT_FROM       => 'lib/Log/Log4perl/Layout/Syslog.pm',
     ((defined($ExtUtils::MakeMaker::VERSION) &&
